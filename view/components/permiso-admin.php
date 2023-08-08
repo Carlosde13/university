@@ -1,0 +1,1 @@
+<small class="text-[white] bg-[#fdc018] text-[10px] p-[3px] font-bold rounded-md">Administrador</small>

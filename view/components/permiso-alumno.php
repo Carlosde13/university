@@ -1,0 +1,1 @@
+<small class="text-[white] bg-[#6f767e] text-[10px] p-[3px] font-bold rounded-md">Alumno</small>

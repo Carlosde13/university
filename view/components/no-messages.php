@@ -1,0 +1,1 @@
+<small class="text-[white] bg-[#269dbc] text-[10px] p-[3px] font-bold rounded-md">No hay mensajes</small>

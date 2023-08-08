@@ -1,0 +1,1 @@
+<small class="text-[white] bg-[#33a24c] text-[10px] p-[3px] font-bold rounded-md">Activo</small>

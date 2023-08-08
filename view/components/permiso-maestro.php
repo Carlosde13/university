@@ -1,0 +1,1 @@
+<small class="text-[white] bg-[#2098ae] text-[10px] p-[3px] font-bold rounded-md">Maestro</small>

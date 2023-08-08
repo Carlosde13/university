@@ -1,0 +1,1 @@
+<small class="text-[white] bg-[#cb354d] text-[10px] p-[3px] font-bold rounded-md">Inactivo</small>

@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.input-div{
+    width: 80%;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #BDBDBD;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
