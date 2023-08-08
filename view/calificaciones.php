@@ -4,7 +4,7 @@ if(!isset($_SESSION["usuario"])){
   header("Location: ../index.php");
   die();
 }
-
+extract($_SESSION["usuario"]);
 ?>
 
 <!DOCTYPE html>

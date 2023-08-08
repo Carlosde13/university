@@ -1,12 +1,12 @@
 <?php
-    session_start();
+session_start();
 
-    //coborrorar la sesion iniciada por el usuario
-    if(!isset($_SESSION["usuario"])){
-        header("Location: ../view/login.php");
-        die();
-    }
-    extract($_SESSION["usuario"]);
+//coborrorar la sesion iniciada por el usuario
+if (!isset($_SESSION["usuario"])) {
+    header("Location: ../view/login.php");
+    die();
+}
+extract($_SESSION["usuario"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,25 +43,32 @@
                     </div>
 
                     <div class="overflow-x-auto ">
-                        <form class="flex flex-col justify-start items-start p-[10px] w-full gap-[10px]">
+                        <form class="flex flex-col justify-start items-start p-[10px] w-full gap-[10px]" action="../controller/editar-perfilController.php" method="POST">
                             <label class="font-bold" for="matricula">Matricula</label>
-                            <input class="w-full border border-slate-600 rounded p-[5px]" id="matricula" name="matricula" value="<?php echo $id ?>"/>
+                            <input class="w-full border border-slate-600 rounded p-[5px]" id="matricula" name="matricula" value="<?php echo $id ?>" disabled />
 
                             <label class="font-bold" for="email">Correo Electronico</label>
-                            <input class="w-full border border-slate-600 rounded p-[5px]" id="email" type="email" name="email" value="<?php echo $correo ?>"/>
+                            <input class="w-full border border-slate-600 rounded p-[5px]" id="email" type="email" name="email" value="<?php echo $correo ?>" />
 
                             <label class="font-bold" for="password">Contraseña, ingresa para cambiar contraseña</label>
-                            <input class="w-full border border-slate-600 rounded p-[5px]" id="password" type="password" name="password"/>
+                            <input class="w-full border border-slate-600 rounded p-[5px]" id="password" type="password" name="password" />
 
                             <label class="font-bold" for="nombre">Nombre(s) </label>
-                            <input class="w-full border border-slate-600 rounded p-[5px]" id="nombre" type="text" name="nombre" value="<?php echo $nombre ?>"/>
+                            <input class="w-full border border-slate-600 rounded p-[5px]" id="nombre" type="text" name="nombre" value="<?php echo $nombre ?>" />
 
                             <label class="font-bold" for="apellido">Apellido(s) </label>
-                            <input class="w-full border border-slate-600 rounded p-[5px]" id="apellido" type="text" name="apellido" value="<?php echo $apellido ?>"/>
+                            <input class="w-full border border-slate-600 rounded p-[5px]" id="apellido" type="text" name="apellido" value="<?php echo $apellido ?>" />
 
                             <label class="font-bold" for="fecha">Fecha de nacimiento</label>
-                            <input class="w-full border border-slate-600 rounded p-[5px]" id="fecha" type="date" name="fecha" value="<?php echo $fecha_nac ?>"/>
-
+                            <input class="w-full border border-slate-600 rounded p-[5px]" id="fecha" type="date" name="fecha" value="<?php echo $fecha_nac ?>" />
+                            <small class="text-[12px] text-rose-500">
+                                <?php
+                                if (isset($_SESSION["error_email_duplicado"])) {
+                                    echo "" . $_SESSION['error_email_duplicado'] . "";
+                                }
+                                unset($_SESSION['error_email_duplicado']);
+                                ?>
+                            </small>
                             <button class="w-auto  bg-[#007aff] rounded-lg text-[white] p-[5px] mt-[20px]" type="submit ">Guardar Cambios</button>
                         </form>
                     </div>
