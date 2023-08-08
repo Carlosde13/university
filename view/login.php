@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 if(isset($_SESSION["usuario"])){
   header("Location: ../view/dashboard.php");
@@ -47,7 +47,7 @@ if(isset($_SESSION["usuario"])){
                     </div>
                     <small class="text-[12px] text-rose-500">
                             <?php
-                            session_start();
+                            
                             if (isset($_SESSION["error_login"])) {
                                 echo "" . $_SESSION['error_login'] . "";
                             }

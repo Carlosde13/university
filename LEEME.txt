@@ -1,0 +1,18 @@
+CREDENCIALES PARA INGRESAR:
+    -Cada vez que se crea un usuario nuevo, el sistema le da por defecto la contrasena: universidad
+        cada uno de los usuarios permanece asi hasta que el usuario mismo decida actualizar este u otros datos 
+
+        Administrador   
+           email: admin@admin 
+           password: universidad
+
+        Maestro   
+           email: maestro@maestro 
+           password: universidad
+
+        Alumno
+            email: alumno@alumno.com 
+            password: universidad 
+
+
+    El resto de usuarios en la base de datos conserva la contrasena por defecto. 
