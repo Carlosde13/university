@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+
+if(!isset($_SESSION["usuario"])){
+  header("Location: ../index.php");
+  die();
+}
 extract($_SESSION["usuario"]);
 
 include("../controller/traer-usuario.php");
@@ -94,7 +99,7 @@ $fechaConvertida = date('Y-m-d', $fechaObjeto);
 
             <div class="w-[150px] h-auto flex flex-col justify-start items-center p-[8px] gap-[10px]">
                 <div class="w-11/12 p-[8px] pb-[10px] border-b border-[#b5babd] rounded-md hover:bg-[#F2F2F2] hover:cursor-pointer">
-                    <a class="flex flex-row justify-start items-center gap-[10px] w-full">
+                    <a class="flex flex-row justify-start items-center gap-[10px] w-full" href="./editar-perfil.php">
                         <span class="material-symbols-outlined">
                             account_circle
                         </span>
@@ -102,8 +107,8 @@ $fechaConvertida = date('Y-m-d', $fechaObjeto);
                     </a>
                 </div>
                 <div class="w-11/12 p-[8px] hover:bg-[#F2F2F2] rounded-md hover:cursor-pointer">
-                    <a class="flex flex-row justify-start items-center gap-[10px] w-full">
-                        <span class="material-symbols-outlined text-[#c4505a]">
+                    <a class="flex flex-row justify-start items-center gap-[10px] w-full" href="../controller/logout.php">
+                        <span class="material-symbols-outlined text-[#c4505a]" >
                             logout
                         </span>
                         <p class="text-[#c4505a]">Salir</p>

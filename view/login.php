@@ -1,3 +1,11 @@
+<?php
+
+
+if(isset($_SESSION["usuario"])){
+  header("Location: ../view/dashboard.php");
+  die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
