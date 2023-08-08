@@ -9,6 +9,7 @@
         $resultado = $mysqli -> query($consulta);
 
         if($resultado){
+            session_start();
             $_SESSION["error_agregar_usuario"] = "Se eliminó correctamente";
             $mysqli -> close();
             

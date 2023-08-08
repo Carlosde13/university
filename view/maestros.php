@@ -78,7 +78,7 @@ extract($_SESSION["usuario"]);
                     <td class='px-6 py-4 whitespace-nowrap'><?php echo $e['direccion']; ?></td>
                     <td class='px-6 py-4 whitespace-nowrap'><?php echo $e['fecha_nac']; ?></td>
                     <td class="px-6 py-4 whitespace-nowrap flex items-center gap-[8px]">
-                      <a class="hover:cursor-pointer">
+                      <a class="hover:cursor-pointer" href="./editar-maestro.php?idE=<?php echo $e['id'] ?>">
                         <?php include("./components/edit-symbol.php"); ?>
                       </a>
                       <a class="hover:cursor-pointer" href="../controller/eliminar-usuario.php?id=<?php echo $e['id'] ."&rol=2"?>">

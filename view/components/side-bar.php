@@ -77,7 +77,7 @@ if ($id_rol == 3) {
             <?php
             if ($id_rol == 1) {
             ?>
-                <a href="#" class="flex flex-row justify-center items-center gap-[8px]">
+                <a href="./maestros.php" class="flex flex-row justify-center items-center gap-[8px]">
                     <span class="material-symbols-outlined text-[#98a0ab]">
                         groups
                     </span>
@@ -103,7 +103,7 @@ if ($id_rol == 3) {
             <?php
             if ($id_rol == 1) {
             ?>
-                <a href="#" class="flex flex-row justify-center items-center gap-[8px]">
+                <a href="./alumnos.php" class="flex flex-row justify-center items-center gap-[8px]">
                     <span class="material-symbols-outlined text-[#98a0ab]">
                         school
                     </span>
@@ -118,7 +118,7 @@ if ($id_rol == 3) {
             <?php
             if ($id_rol == 1) {
             ?>
-                <a href="#" class="flex flex-row justify-center items-center gap-[8px]">
+                <a href="./clases.php" class="flex flex-row justify-center items-center gap-[8px]">
                     <span class="material-symbols-outlined text-[#98a0ab]">
                         local_library
                     </span>
