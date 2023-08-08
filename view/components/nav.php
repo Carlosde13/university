@@ -12,7 +12,7 @@
             <span class="material-symbols-outlined text-[#98a0ab] ">
                 menu
             </span>
-            <p class="text-[#98a0ab]">HOME</p>
+            <a class="text-[#98a0ab]" href="./dashboard.php"> HOME</a>
         </a>
     </div>
     <div class="w-1/2 flex justify-end items center">

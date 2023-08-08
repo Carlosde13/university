@@ -1,10 +1,13 @@
 <?php
 session_start();
-if(!isset($_SESSION["usuario"])){
+
+if (!isset($_SESSION["usuario"])) {
   header("Location: ../index.php");
   die();
 }
 extract($_SESSION["usuario"]);
+include("../controller/traer-misClases.php");
+$displayNota = "";
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +22,7 @@ extract($_SESSION["usuario"]);
 
 
   <link href="/dist/output.css" rel="stylesheet">
-  <title>Clases</title>
+  <title>Calificaciones</title>
 </head>
 
 <body>
@@ -52,15 +55,30 @@ extract($_SESSION["usuario"]);
                 </tr>
               </thead>
               <tbody class="bg-white divide-y divide-gray-200">
-                <tr>
-                  <td class="px-6 py-4 whitespace-nowrap">Datos</td>
-                  <td class="px-6 py-4 whitespace-nowrap">Datos</td>
-                  <td class="px-6 py-4 whitespace-nowrap">Datos</td>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                    <?php include("./components/no-messages.php"); ?>
-                  </td>
-
-                </tr>
+                <?php
+                foreach ($listaMisClases as $e) {
+                ?>
+                  <tr>
+                    <td class='px-6 py-4 whitespace-nowrap'><?php echo $e['id']; ?></td>
+                    <td class='px-6 py-4 whitespace-nowrap'><?php echo $e['nombre']; ?></td>
+                    <td class='px-6 py-4 whitespace-nowrap'>
+                      <?php 
+                        
+                        if($e['nota'] == null){
+                          $displayNota ="Sin Calificacion";
+                        }else{
+                          $displayNota = $e['nota'];
+                        }
+                        echo $displayNota;
+                      ?>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <?php include("./components/no-messages.php"); ?>
+                    </td>
+                  </tr>
+                <?php
+                }
+                ?>
               </tbody>
             </table>
           </div>
@@ -105,22 +123,22 @@ extract($_SESSION["usuario"]);
     <div class="w-[150px] h-auto bg-[white] menu rounded-md hidden" id="desp_menu">
 
       <div class="w-[150px] h-auto flex flex-col justify-start items-center p-[8px] gap-[10px]">
-      <div class="w-11/12 p-[8px] pb-[10px] border-b border-[#b5babd] rounded-md hover:bg-[#F2F2F2] hover:cursor-pointer">
-        <a class="flex flex-row justify-start items-center gap-[10px] w-full" href="./editar-perfil.php">
-          <span class="material-symbols-outlined">
-            account_circle
-          </span>
-          <p >Perfil</p>
-        </a>
-      </div>
-      <div class="w-11/12 p-[8px] hover:bg-[#F2F2F2] rounded-md hover:cursor-pointer">
-        <a class="flex flex-row justify-start items-center gap-[10px] w-full" href="../controller/logout.php">
-          <span class="material-symbols-outlined text-[#c4505a]">
-            logout
-          </span>
-          <p class="text-[#c4505a]">Salir</p>
-        </a>
-      </div>
+        <div class="w-11/12 p-[8px] pb-[10px] border-b border-[#b5babd] rounded-md hover:bg-[#F2F2F2] hover:cursor-pointer">
+          <a class="flex flex-row justify-start items-center gap-[10px] w-full" href="./editar-perfil.php">
+            <span class="material-symbols-outlined">
+              account_circle
+            </span>
+            <p>Perfil</p>
+          </a>
+        </div>
+        <div class="w-11/12 p-[8px] hover:bg-[#F2F2F2] rounded-md hover:cursor-pointer">
+          <a class="flex flex-row justify-start items-center gap-[10px] w-full" href="../controller/logout.php">
+            <span class="material-symbols-outlined text-[#c4505a]">
+              logout
+            </span>
+            <p class="text-[#c4505a]">Salir</p>
+          </a>
+        </div>
       </div>
     </div>
 

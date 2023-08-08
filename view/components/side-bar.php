@@ -51,7 +51,7 @@ if ($id_rol == 3) {
             <?php
             if ($id_rol == 3) {
             ?>
-                <a href="#" class="flex flex-row justify-center items-center gap-[8px]">
+                <a href="./calificaciones.php" class="flex flex-row justify-center items-center gap-[8px]">
                     <span class="material-symbols-outlined text-[#98a0ab]">
                         new_releases
                     </span>
@@ -63,11 +63,11 @@ if ($id_rol == 3) {
             <?php
             if ($id_rol == 2) {
             ?>
-                <a href="#" class="flex flex-row justify-center items-center gap-[8px]">
+                <a href="./mis-alumnos.php" class="flex flex-row justify-center items-center gap-[8px]">
                     <span class="material-symbols-outlined text-[#98a0ab]">
                         school
                     </span>
-                    <p class="text-[#98a0ab] text-[12px] font-semibold">Alumnos</p>
+                    <p class="text-[#98a0ab] text-[12px] font-semibold">Mis Alumnos</p>
                 </a>
             <?php
             }
@@ -89,7 +89,7 @@ if ($id_rol == 3) {
             <?php
             if ($id_rol == 3) {
             ?>
-                <a href="#" class="flex flex-row justify-center items-center gap-[8px]">
+                <a href="./mis-clases.php" class="flex flex-row justify-center items-center gap-[8px]">
                     <span class="material-symbols-outlined text-[#98a0ab]">
                         push_pin
                     </span>

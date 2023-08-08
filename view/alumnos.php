@@ -4,7 +4,10 @@ if(!isset($_SESSION["usuario"])){
   header("Location: ../index.php");
   die();
 }
-
+if($_SESSION["usuario"]["id_rol"] != 1){
+  header("Location: ./dashboard.php");
+  die();
+}
 include("../controller/mostrarTabla-alumnos.php");
 
 extract($_SESSION["usuario"]);
